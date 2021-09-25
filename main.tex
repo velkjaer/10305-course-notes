@@ -1,0 +1,82 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+
+\title{Advanced Solid State Physics Course Notes \\ DTU Course 10305}
+\author{Lecturer: \emph{Kristian Thygesen}}
+\date{Fall 2018}
+
+\input{tex/packages.tex}
+
+\usepackage[square,authoryear, sort&compress]{natbib}
+\bibliographystyle{plainnat}
+%    round: (default) for round parentheses;
+%    square: for square brackets;
+%    curly: for curly braces;
+%    angle: for angle brackets;
+%    colon: (default) to separate multiple citations with colons;
+%    comma: to use commas as separaters;
+%    authoryear: (default) for author-year citations;
+%    numbers: for numerical citations;
+%    super: for superscripted numerical citations, as in Nature;
+%    sort: orders multiple citations into the sequence in which they appear in the list of references;
+%    sort&compress: as sort but in addition multiple numerical citations are compressed if possible (as 3-6, 15);
+%    longnamesfirst: makes the first citation of any reference the equivalent of the starred variant (full author list) and subsequent citations normal (abbreviated list);
+%    sectionbib: redefines \thebibliography to issue \section* instead of \chapter*; valid only for classes with a \chapter command; to be used with the chapterbib package;
+%    nonamebreak: keeps all the authors' names in a citation on one line; causes overfull hboxes but helps with some hyperref problems.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%            Page style                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\topmargin       5 mm
+%\oddsidemargin    2 mm
+%\evensidemargin   2 mm
+%\textwidth      150 mm
+%\textheight     210 mm
+
+%\numberwithin{figure}{section}
+
+% Disse to linjer sikrer, at der bliver mellemrum i stedet for indrykning ved afsnit
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+% Setup for lstlistings:
+\lstset{%
+backgroundcolor=\color{white},
+breaklines=true, 
+keepspaces=true,  % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+ keywordstyle=\color{purple},
+commentstyle=\color{blue},
+language=Python,
+stringstyle=\color{red},
+}
+
+\usepackage{arydshln}
+
+\setlength{\dashlinedash}{2pt}
+\setlength{\dashlinegap}{3.5pt}
+\setlength{\arrayrulewidth}{0.2pt}
+\renewcommand{\baselinestretch}{1.15} 
+
+\pagestyle{fancy}
+
+\lhead{\textit{10305}}
+\rhead{\textit{Course Notes}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%            main body                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+\paragraph{Disclaimer:} The authors of this document are second to none
+
+\input{tex/week1.tex}
+\input{tex/week2.tex}
+\input{tex/week3.tex}
+\input{tex/week4.tex}
+\input{tex/week5.tex}
+\input{tex/week6.tex}
+\input{tex/week8.tex}
+\end{document}

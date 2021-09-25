@@ -1,0 +1,28 @@
+\section{Week 6}
+\textbf{Reading Material [GP]:}
+\begin{itemize}
+    \item 529-539 about band-to-band transitions
+    \item 288-296 about excitons 
+    \item 549-553 about the effect of excitons on the optical properties
+\end{itemize}
+\rule{\textwidth}{1pt}
+\emph{Kristian's Appetiser:}
+The first part concerns the description of optical absorption by band-to-band transitions. This is a single-particle picture which assumes that the electron in the conduction band and the hole left behind in the valence band, do not interact. This is an approximation which is, however, valid in many (important) situations, in particular for absorption above the band gap. Excitons are bound electron-hole pairs that form due to the attractive Coulomb interaction between the electron and the hole. They are mainly important in crystals where screening is weak, i.e. in insulators with low dielectric constants and/or in low dimensional structures such as 2D materials where the screening is weak due to geometrical constraints on the motion of the electrons. Excitons influence the optical properties, such as the absorption spectrum, by introducing discrete spectral lines below the band gap.They are mainly important when the exciton binding energy (the energy of the exciton relative to the band gap) is larger than the thermal energy $k_{B}T$ (25 meV at room temperature).
+\rule{\textwidth}{1pt} \\
+\paragraph{Dipole approximation} Where the wavelength of the incident radiation is much larger than the lattice parameter; in these situations, the photon wavevector $\vec{q}$ of the incident radiation is small compared to the range of values of $\vec{k}$ within the first Brillioun Zone (FBZ) and thus we neglect the $\vec{q}$-dependence and set $\vec{k}_j = \vec{k}_i$ corresponding to vertical/direct transitions.
+
+In regards to the imaginary part of the dielectric function, this implies that
+\begin{equation}
+\begin{split}
+    \varepsilon_2\qty(\omega) &= \dfrac{8\qty(\pi e)^2 }{\qty(m \omega)^2} \dfrac{1}{V} \sum_{cv} \sum_{\kkk} \abs{\mel{\psi_{c\kkk}}{\hat{\eee}\cdot \ppp}{\psi_{v\kkk}}}^2 \delta \qty(E_{c\kkk} - E_{v\kkk} - \hbar \omega) \\
+    &= \dfrac{8\qty(\pi e)^2 }{\qty(m \omega)^2}  \sum_{cv} \int_{B.Z.} \dfrac{d\kkk}{\qty(2\pi)^3} \abs{\hat{\vec{e}} \cdot \mathrm{\mathbf{M}}_{cv}\qty(\kkk)}^2\delta \qty(E_{c\kkk} - E_{v\kkk} - \hbar \omega )
+\end{split}
+\end{equation}
+where $\mathrm{\mathbf{M}}_{cv}\qty(\kkk)$ denotes the dipole matrix element $\mel{\psi_{c\kkk}}{\ppp}{\psi_{v\kkk}}$ and the sum runs over every couple of valence and conduction bands. 
+
+Furthermore, the matrix elements $  \mel{\psi_{c\kkk}}{\mathrm{e}^{i \qqq \cdot \rrr}\hat{\eee}\cdot \ppp}{\psi_{v\kkk}}$ is typically denoted \textbf{the oscillator strength}.
+
+\paragraph{DOS vs JDOS} \emph{The DOS is the number of states available with the same energy whereas the JDOS is the number of single particle transitions available for a given energy $E$.}
+
+\textbf{NB.:} One can always choose a gauge such that the scalar potential vanishes $\Rightarrow \chi = \int_{-\infty}^t \phi\qty(r,t') dt'$. However, this is only valid for transverse waves.\\
+

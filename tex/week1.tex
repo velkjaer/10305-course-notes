@@ -1,0 +1,46 @@
+\section*{Week 1}\label{sec:week1}
+\emph{Kristian's appetiser:}  I will cover chapter 4. It would be a good idea to refresh your understanding of the electronic many-body problem, and particular the Hartree-Fock theory. Thus I recommend that you read, or at least take a glance at, Chapter 4 before the lecture. I shall also say something about density functional theory (DFT) which is 4.8.\\
+
+\begin{itemize}
+    \item \textbf{The Hatree approximation}: product of single particle wavefunctions. Hamiltonian based on a static mean field picture. Doesn't include correlation effect. Particles self-interact.
+    \item \textbf{The Hatree-Fock approximation}: based on slater-determinants, result in an extra term in the two particle operators: \emph{direct} (from Hatree) and \emph{exchange}. Exchange: interchange particle \emph{i} and \emph{j}. Exchange is always large than 0, but with negative sign $\rightarrow$ exchange always lower the energy. Particles don't self interact due to cancellation between direct and exchange potential. (Obviously exchange only happens when spin are parallel). Magnetism is a consequence of exchange.% clever shit.
+    \item As evident from the experimental results vs. simulations on atoms shown in \figref{fig:HF_Cohesive_energy}, the Hartree-Fock (HF) approximation underestimates the cohesive energy significantly.
+    % add figure: HF correlation effect
+    The reason for this boil down to the fact that the HF-approximation does not include correlation effects. 
+    \item \textbf{Koopmans' Theorem:} \emph{The energy required to remove (without relaxtion) an electron from the orbital $m$ equals the HF eigenenergies.}
+    \item We expect that Koopman's theorem overestimates the ionisation energy due to missing relaxation. Particularly for atoms due to localised orbitals. % Include figure from slides.
+    \item In solids, the only thing that is missing is the correlation effects, i.e., screening effects (quasiparticles: a quasiparticle is an lectron together with its positive screening cloud).
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw[->] (7,0) -| (0,5); % axes
+        \node[rotate=90] at (-0.25,2.5) {\large $\varepsilon$};
+        \node at (1.75,-0.25) {Atom};
+        \node at (4.25,-0.25) {Solid};
+        
+        
+        \draw (1,4.5) -- (2.5,4.5); % atom HF
+        \node at (3,4.5) {HF};
+        
+        \draw[<->,dashed] (1.75,4.5) -- (1.75,3.5); %corr
+        \node at (2.25,4) {corr};
+        
+        \draw (1,3.5) -- (2.5,3.5); % atom true
+        \node at (3,3.5) {true};
+        
+        \draw (3.5,3) -- (5,3); % solid HF
+        \node at (5.5,3) {HF};
+        
+        \draw[<->,dashed] (4.25,3) -- (4.25,0.5); %corr
+        \node at (4.75,1.75) {corr};
+        
+        \draw (3.5,0.5) -- (5,0.5); % solid true
+        \node at (5.5,0.5) {true};
+        
+    \end{tikzpicture}
+    \caption{Schematic illustration of the magnitude of the correlation energy for HF for atoms an solids.}
+    \label{fig:HF_Cohesive_energy}
+\end{figure}
+
